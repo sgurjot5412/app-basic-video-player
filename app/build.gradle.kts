@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -48,4 +50,21 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    //OkHttp
+    implementation(libs.okHttp)
+    //Gson
+    implementation(libs.gson)
+    //Coroutines
+    implementation(libs.coroutine.core)
+    implementation(libs.coroutine.android)
+    //Hilt
+    implementation(libs.dagger.android)
+    ksp(libs.dagger.compiler)
+    ksp(libs.hilt.compiler)
+
+    implementation(libs.androidx.lifecycle)
 }
